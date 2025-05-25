@@ -32,6 +32,6 @@
   },
   "updates": {
     "checkInterval": 86400000,
-    "configUrl": "https://raw.githubusercontent.com/YOUR_USERNAME/chat-dinger-config/main/config.json"
+    "configUrl": "https://raw.githubusercontent.com/rumblelab/chat-dinger-config/main/config.json"
   }
 }
