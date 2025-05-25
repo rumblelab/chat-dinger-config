@@ -1,0 +1,37 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2025-01-24",
+  "sites": {
+    "chatgpt": {
+      "enabled": true,
+      "domains": ["chatgpt.com", "chat.openai.com"],
+      "detection": {
+        "method": "attribute_monitoring",
+        "selectors": [
+          "#composer-submit-button",
+          "[data-testid='send-button']",
+          "button[aria-label*='Send']",
+          "button[aria-label*='Stop']"
+        ],
+        "stopKeywords": ["stop", "cancel", "interrupt"],
+        "sendKeywords": ["send", "submit"]
+      }
+    },
+    "claude": {
+      "enabled": true,
+      "domains": ["claude.ai"],
+      "detection": {
+        "method": "button_disappearance",
+        "selectors": [
+          "fieldset button[aria-label*='Send']",
+          "button[aria-label='Send message']"
+        ],
+        "pollInterval": 500
+      }
+    }
+  },
+  "updates": {
+    "checkInterval": 86400000,
+    "configUrl": "https://raw.githubusercontent.com/YOUR_USERNAME/chat-dinger-config/main/config.json"
+  }
+}
